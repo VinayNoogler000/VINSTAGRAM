@@ -10,19 +10,19 @@ const posts = [
         id: uuidv4(),
         username: "vinay",
         image: "cat.jpg",
-        caption: "Stop staring at me with them big ol' eyes!"
+        caption: "Stop staring at me with your big ol' eyes!😒👀🙄"
     },
     {
         id: uuidv4(),
         username: "john",
         image: "dog.jpg",
-        caption: "Hey big guy, wanna have a football match with me!??"
+        caption: "Hey big guy, wanna have a football match with me!??😋😎⚽"
     },
     {
         id: uuidv4(),
         username: "shradha",
         image: "food.jpg",
-        caption: "Please, just stop taking pictures, and start eating it!"
+        caption: "Please, just stop taking pictures, and start eating it!🤤😤🥴"
     },
 ];
 
