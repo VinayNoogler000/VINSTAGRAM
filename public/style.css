@@ -9,3 +9,36 @@ h1 {
     font-size: 60px;
     text-align: center;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.posts {
+    width: 600px;
+    padding: 0.5rem 1.5rem;
+    background-color: pink;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.posts .username {
+    font-style: italic;
+}
+
+.posts img {
+    width: 100%;
+    max-height: 750px;
+    border-radius: 0.5rem;
+}
+
+.posts .caption {
+    border-left: 2px solid black;
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+    font-size: 1.25rem;
+}
