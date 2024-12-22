@@ -4,6 +4,7 @@ const { v4: uuidv4 } = require('uuid');
 const app = express();
 const PORT = 8080;
 
+// Define 'Resource' as an array of posts, on which CRUD operations can be performed, instead of a database:
 const posts = [
     {
         id: uuidv4(),
@@ -25,6 +26,20 @@ const posts = [
     },
 ];
 
+// Function to traverse the array of characters until a dot '.' is found:
+const traverseUntil = (arr) => { 
+    const result = [];
+    for (let el of arr) {
+        if (el === '.') {
+            break;
+        }
+        else {
+            result.push(el);
+        }
+    }
+    return result;
+}
+
 // Set up the view engine, views directory, and static files:
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -32,7 +47,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Define the routes:
 app.get("/", (req, res) => {
-    res.render("posts.ejs", {posts});
+    res.render("posts.ejs", {posts, traverseUntil});
 });
 
 app.listen(PORT, () => {
