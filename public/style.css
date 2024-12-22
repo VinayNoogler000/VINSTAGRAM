@@ -1,0 +1,11 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    background: linear-gradient(to bottom right, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #777737, #FCAF45, #FFDC80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 60px;
+    text-align: center;
+}
