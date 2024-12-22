@@ -2,7 +2,7 @@
 
 ## Summary
 
-This project is a basic clone of Instagram built to strengthen backend web development skills, where user have the basic functionalities of uploading photos with a caption as posts, edit the post's caption, and delete the post. It demonstrates the fundamental concepts of building a web application by using these backend web technologies.
+This project is a basic clone of Instagram built to strengthen my backend web development skills, where user have the basic functionalities of uploading photos with a caption (as posts), edit the post's caption, and delete the post. It demonstrates the fundamental concepts of building a web application by using these backend web technologies.
 
 ## Technologies Used
 
