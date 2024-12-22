@@ -51,7 +51,10 @@ project-root/
     ├── posts.ejs     # Homepage of the website.
 ├── public            # Contains static files such as CSS and images.
     ├── style.css     # Basic styling for the whole website (all webpages).
-└── README.md         # Project documentation.
+├── package.json      # Lists the project dependencies and scripts.
+├── .gitignore        # Contains all the files and folders to be ignored (not tracked) by Git.
+├── README.md         # Project documentation.
+└── LICENSE           # Contains the licensing information for the project
 ```
 
 ## License
