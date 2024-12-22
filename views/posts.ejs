@@ -9,5 +9,15 @@
 </head>
 <body>
     <h1>Instagram</h1>
+
+    <main>
+        <% for(let post of posts) { %>
+            <div class="post">
+                <h2 class="username">@<%= post.username %></h2>
+                <img src="images/<%= post.image %>" alt="<%= traverseUntil(post.image.split('')).join('') %>">
+                <p class="caption"><%= post.caption %></p>
+            </div>
+        <% } %>
+    </main>
 </body>
 </html>
