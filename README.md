@@ -37,7 +37,8 @@ This project is a basic clone of Instagram built to strengthen my backend web de
 
 3. Start the server:
     ```bash
-    npm start
+    npm start # only if 'nodemon' library is installed in your system, else
+    node index.js
     ```
 
 4. Open your browser and navigate to `http://localhost:8080`.
