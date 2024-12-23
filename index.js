@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4 } = require("uuid");
+const methodOverride = require("method_override");
 const app = express();
 const PORT = 8080;
 
@@ -40,6 +41,9 @@ const traverseUntil = (arr) => {
     return result;
 }
 
+// Use the methodOverride middleware to convert the POST request to PATCH, and DELETE requests:
+app.use(methodOverride('_method'));
+
 // Set up the view engine, views directory, and static files:
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -55,6 +59,7 @@ app.get("/posts/:id", (req, res) => {
     const post = posts.find(p => p.id === id);
     res.render("show.ejs", {post, traverseUntil});
 });
+
 app.get("/posts/:id/edit", (req, res) => {
     const { id } = req.params;
     const post = posts.find(p => p.id === id);
