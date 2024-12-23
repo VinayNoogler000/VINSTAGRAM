@@ -53,7 +53,7 @@ app.get("/posts", (req, res) => {
 app.get("/posts/:id", (req, res) => {
     const { id } = req.params;
     const post = posts.find(p => p.id === id);
-    res.render("show.ejs", {post});
+    res.render("show.ejs", {post, traverseUntil});
 });
 
 app.listen(PORT, () => {
