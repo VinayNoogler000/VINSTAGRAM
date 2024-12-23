@@ -1,5 +1,6 @@
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
 }
 
 h1 {
@@ -42,6 +43,33 @@ main {
     padding: 0.25rem;
     padding-left: 0.5rem;
     font-size: 1.25rem;
+}
+
+.posts .links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.posts .links a {
+    background: linear-gradient(to bottom right, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #777737, #FCAF45, #FFDC80);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.posts .links a:hover {
+    transform: scale(1.03);
+    color: white;
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: white;
 }
 
 .newPostLink {
