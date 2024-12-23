@@ -55,6 +55,11 @@ app.get("/posts/:id", (req, res) => {
     const post = posts.find(p => p.id === id);
     res.render("show.ejs", {post, traverseUntil});
 });
+app.get("/posts/:id/edit", (req, res) => {
+    const { id } = req.params;
+    const post = posts.find(p => p.id === id);
+    res.render("edit.ejs", {post, traverseUntil});
+});
 
 app.listen(PORT, () => {
     console.log("Listening on Port:", PORT);
