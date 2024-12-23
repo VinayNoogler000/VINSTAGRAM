@@ -30,7 +30,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Define 'Resource' as an array of posts, on which CRUD operations can be performed, instead of a database:
-const posts = [
+let posts = [
     {
         id: uuidv4(),
         username: "vinay",
@@ -98,6 +98,12 @@ app.patch("/posts/:id", (req, res) => {
     const newCaption = req.body.caption;
     const post = posts.find( p => p.id === id);
     post.caption = newCaption;
+    res.redirect("/posts");
+});
+
+app.get("/posts/:id/delete", (req, res) => {
+    const { id } = req.params;
+    posts = posts.filter(p => p.id != id);
     res.redirect("/posts");
 });
 
