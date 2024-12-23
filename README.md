@@ -71,6 +71,14 @@ I would love to hear your feedback on this project! If you encounter any bugs, h
 
 I am currently open to Full-Stack Web Development roles. If you are interested in working with me or have any opportunities, please reach out to me via [LinkedIn](https://www.linkedin.com/in/vinay-tambey/) or email me at vinaytambey000@gmail.com.
 
+## To-Do
+
+1. Giving warning to the user when deleting the post.
+2. Make the website responsive.
+3. Using Database to store user's data.
+4. Implementing User Authentication.
+5. Adding a Share feature, which will generate a concise link of the posts to share it easily.
+
 ## License
 
 This project is licensed under the [MIT](https://github.com/VinayNoogler000/Instagram-Clone/blob/main/LICENSE) License.
