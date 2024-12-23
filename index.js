@@ -57,6 +57,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/posts", (req, res) => {
     res.render("index.ejs", {posts, traverseUntil});
 });
+app.get("/posts/new", (req, res) => {
+    res.render("new.ejs");
+});
 
 app.get("/posts/:id", (req, res) => {
     const { id } = req.params;
