@@ -21,6 +21,7 @@ This project is a basic clone of Instagram built to strengthen my backend web de
 5. **CRUD Operations**: Understood the concepts of Create, Read, Update, and Delete (CRUD) operations.
 6. **CRUD on Resources**: Learned to perform CRUD operations on resources (data stored in the database) using HTTP verbs and RESTful APIs.
 7. **Redirection**: Learned to redirect client requests using `res.redirect()` in route handlers.
+8. **Method Override**: Learned to override HTTP GET and POST methods with PUT, PATCH, and DELETE methods using the 'method-override' library.
 
 ## Setup
 
