@@ -46,8 +46,8 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Define the routes:
-app.get("/", (req, res) => {
-    res.render("posts.ejs", {posts, traverseUntil});
+app.get("/posts", (req, res) => {
+    res.render("index.ejs", {posts, traverseUntil});
 });
 
 app.listen(PORT, () => {
