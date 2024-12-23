@@ -44,6 +44,10 @@ const traverseUntil = (arr) => {
 // Use the methodOverride middleware to convert the POST request to PATCH, and DELETE requests:
 app.use(methodOverride('_method'));
 
+// Set up the middleware to parse the incoming requests, storing data in their respective formats (including JSON):
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 // Set up the view engine, views directory, and static files:
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -64,6 +68,14 @@ app.get("/posts/:id/edit", (req, res) => {
     const { id } = req.params;
     const post = posts.find(p => p.id === id);
     res.render("edit.ejs", {post, traverseUntil});
+});
+
+app.patch("/posts/:id", (req, res) => {
+    const { id } = req.params;
+    const newCaption = req.body.caption;
+    const post = posts.find( p => p.id === id);
+    post.caption = newCaption;
+    res.redirect("/posts");
 });
 
 app.listen(PORT, () => {
