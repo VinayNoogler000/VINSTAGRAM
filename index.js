@@ -2,8 +2,32 @@ const express = require("express");
 const path = require("path");
 const { v4: uuidv4 } = require("uuid");
 const methodOverride = require("method-override");
+const multer = require('multer');
 const app = express();
 const PORT = 8080;
+
+// Configure multer for specifing uploaded file's destinatation and filename:
+const storage = multer.diskStorage({
+    destination(req, file, cb) {
+        cb(null, 'public/images'); // specify the directory to save uploaded files
+    },
+    filename(req, file, cb) {
+        cb(null, file.originalname); // use the original file name
+    }
+});
+const upload = multer({ storage });
+
+// Use the methodOverride middleware to convert the POST request to PATCH, and DELETE requests:
+app.use(methodOverride('_method'));
+
+// Set up the middleware to parse the incoming requests, storing data in their respective formats (including JSON):
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Set up the view engine, views directory, and static files:
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Define 'Resource' as an array of posts, on which CRUD operations can be performed, instead of a database:
 const posts = [
@@ -41,22 +65,11 @@ const traverseUntil = (arr) => {
     return result;
 }
 
-// Use the methodOverride middleware to convert the POST request to PATCH, and DELETE requests:
-app.use(methodOverride('_method'));
-
-// Set up the middleware to parse the incoming requests, storing data in their respective formats (including JSON):
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-// Set up the view engine, views directory, and static files:
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
-app.use(express.static(path.join(__dirname, "public")));
-
 // Define the routes:
 app.get("/posts", (req, res) => {
     res.render("index.ejs", {posts, traverseUntil});
 });
+
 app.get("/posts/new", (req, res) => {
     res.render("new.ejs");
 });
@@ -73,16 +86,19 @@ app.get("/posts/:id/edit", (req, res) => {
     res.render("edit.ejs", {post, traverseUntil});
 });
 
+app.post("/posts", upload.single('image'), (req, res) => { 
+    const { username, caption } = req.body;
+    const image = req.file;
+    posts.push({ id: uuidv4(), username, image: image.originalname, caption });
+    res.redirect("/posts");
+});
+
 app.patch("/posts/:id", (req, res) => {
     const { id } = req.params;
     const newCaption = req.body.caption;
     const post = posts.find( p => p.id === id);
     post.caption = newCaption;
     res.redirect("/posts");
-});
-
-app.get("posts/new", (req, res) => {
-    res.render("new.ejs");
 });
 
 app.listen(PORT, () => {
