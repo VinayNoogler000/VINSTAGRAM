@@ -14,7 +14,7 @@
         <% for(let post of posts) { %>
             <div class="posts">
                 <h2 class="username">@<%= post.username %></h2>
-                <img src="images/<%= post.image %>" alt="<%= traverseUntil(post.image.split('')).join('') %>">
+                <img src="uploads/images/<%= post.image %>" alt="<%= traverseUntil(post.image.split('')).join('') %>">
                 <p class="caption"><%= post.caption %></p>
 
                 <div class="links">

@@ -9,7 +9,7 @@ const PORT = 8080;
 // Configure multer for specifing uploaded file's destinatation and filename:
 const storage = multer.diskStorage({
     destination(req, file, cb) {
-        cb(null, 'public/images'); // specify the directory to save uploaded files
+        cb(null, 'public/uploads/images'); // specify the directory to save uploaded files
     },
     filename(req, file, cb) {
         cb(null, file.originalname); // use the original file name

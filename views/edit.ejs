@@ -13,7 +13,7 @@
     <main>
         <div class="posts">
             <h2 class="username">@<%= post.username %></h2>
-            <img src="/images/<%= post.image %>" alt="<%= traverseUntil(post.image.split('')).join('') %>">
+            <img src="/uploads/images/<%= post.image %>" alt="<%= traverseUntil(post.image.split('')).join('') %>">
             
             <form action="http://localhost:8080/posts/<%= post.id %>?_method=PATCH" method="post">
                 <textarea placeholder="Enter the Caption..." name="caption" rows="5" cols="50"><%= post.caption %></textarea>
