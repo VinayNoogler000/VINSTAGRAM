@@ -18,8 +18,9 @@
                 <p class="caption"><%= post.caption %></p>
 
                 <div class="links">
-                    <a class="detail" href="http://localhost:8080/posts/<%= post.id %>">See in Detail</a>
-                    <a class="edit" href="http://localhost:8080/posts/<%= post.id %>/edit">Edit</a>
+                    <a href="http://localhost:8080/posts/<%= post.id %>">See in Detail</a>
+                    <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit</a>
+                    <a class="delete" href="http://localhost:8080/posts/<%= post.id %>/delete">Delete</a>
                 </div>
             </div>
         <% } %>

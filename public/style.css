@@ -58,10 +58,18 @@ main {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
+    font-weight: 600;
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
     text-decoration: none;
     transition: 0.2s ease-in-out;
+}
+
+.posts .links .delete {
+    background: red;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .posts .links a:hover, .posts form button:hover, form.posts button:hover {
