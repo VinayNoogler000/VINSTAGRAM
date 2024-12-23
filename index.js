@@ -50,6 +50,12 @@ app.get("/posts", (req, res) => {
     res.render("index.ejs", {posts, traverseUntil});
 });
 
+app.get("/posts/:id", (req, res) => {
+    const { id } = req.params;
+    const post = posts.find(p => p.id === id);
+    res.render("show.ejs", {post});
+});
+
 app.listen(PORT, () => {
     console.log("Listening on Port:", PORT);
 });
