@@ -43,3 +43,27 @@ main {
     padding-left: 0.5rem;
     font-size: 1.25rem;
 }
+
+.newPostLink {
+    background: linear-gradient(to bottom right, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #777737, #FCAF45, #FFDC80);
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.newPostLink img {
+    width: 1.75rem;
+}
+
+.newPostLink:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 15px 20px rgba(0, 0, 0, 0.7), -2px 10px 10px rgba(0, 0, 0, 0.5);
+}
