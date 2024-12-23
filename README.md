@@ -22,6 +22,7 @@ This project is a basic clone of Instagram built to strengthen my backend web de
 6. **CRUD on Resources**: Learned to perform CRUD operations on resources (data stored in the database) using HTTP verbs and RESTful APIs.
 7. **Redirection**: Learned to redirect client requests using `res.redirect()` in route handlers.
 8. **Method Override**: Learned to override HTTP GET and POST methods with PUT, PATCH, and DELETE methods using the 'method-override' library.
+9. **Route/Path vs API**: Understood the difference between a route/path and an API. A route/path is an endpoint to handle requests, while an API is a set of rules for communication between client and server.
 
 ## Setup
 
