@@ -55,7 +55,12 @@ project-root/
 ├── index.js          # Main entry point of the application.
 ├── views             # Contains EJS templates.
     ├── posts.ejs     # Homepage of the website.
+    ├── show.ejs      # Page to see each post, individually.
+    ├── edit.ejs      # Page to edit a specific post.
+    ├── new.ejs       # Page to upload a new post.
 ├── public            # Contains static files such as CSS and images.
+    ├── uploads       # Stores all the files uploaded by the client.
+        ├── images    # Stores all the images of posts uploaded by the client.
     ├── style.css     # Basic styling for the whole website (all webpages).
 ├── package.json      # Lists the project dependencies and scripts.
 ├── .gitignore        # Contains all the files and folders to be ignored (not tracked) by Git.
