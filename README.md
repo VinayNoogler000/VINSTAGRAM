@@ -11,6 +11,8 @@ This project is a basic clone of Instagram built to strengthen my backend web de
 - **EJS (Embedded JavaScript)**: A templating engine used to generate HTML markup with plain JavaScript.
 - **UUID**: A library to generate unique identifiers for each post.
 - **Vanilla CSS**: For styling the HTML content.
+- **Multer**: A middleware for handling `multipart/form-data`, used for uploading files.
+- **Method-Override**: A library to use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
 
 ## Learnings
 
@@ -23,6 +25,7 @@ This project is a basic clone of Instagram built to strengthen my backend web de
 7. **Redirection**: Learned to redirect client requests using `res.redirect()` in route handlers.
 8. **Method Override**: Learned to override HTTP GET and POST methods with PUT, PATCH, and DELETE methods using the 'method-override' library.
 9. **Route/Path vs API**: Understood the difference between a route/path and an API. A route/path is an endpoint to handle requests, while an API is a set of rules for communication between client and server.
+10. **Multer Library**: Learned how to use the 'multer' library for handling file uploads, including specifying the destination and name of the uploaded files, defining the total number of files the client can send with requests or form-data, parsing the image files uploaded as form-data, and handling multiple file uploads of the same field.
 
 ## Setup
 
@@ -59,6 +62,14 @@ project-root/
 ├── README.md         # Project documentation.
 └── LICENSE           # Contains the licensing information for the project
 ```
+
+## Feedback
+
+I would love to hear your feedback on this project! If you encounter any bugs, have suggestions for performance improvements, or have ideas for new features, please feel free to open an issue on the [GitHub repository](https://github.com/VinayNoogler000/Instagram-Clone/issues).
+
+## Careers
+
+I am currently open to Full-Stack Web Development roles. If you are interested in working with me or have any opportunities, please reach out to me via [LinkedIn](https://www.linkedin.com/in/vinay-tambey/) or email me at vinaytambey000@gmail.com.
 
 ## License
 
