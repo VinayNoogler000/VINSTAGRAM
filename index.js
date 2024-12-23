@@ -78,6 +78,10 @@ app.patch("/posts/:id", (req, res) => {
     res.redirect("/posts");
 });
 
+app.get("posts/new", (req, res) => {
+    res.render("new.ejs");
+});
+
 app.listen(PORT, () => {
     console.log("Listening on Port:", PORT);
 });
