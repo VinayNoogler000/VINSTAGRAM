@@ -46,7 +46,7 @@ This project is a basic clone of Instagram built to strengthen my backend web de
     node index.js
     ```
 
-4. Open your browser and navigate to `http://localhost:8080`.
+4. Open your browser and navigate to `http://localhost:8080/posts`.
 
 ## Project Structure
 
