@@ -19,7 +19,7 @@ This project is a basic clone of Instagram built to strengthen my backend web de
 
 ## 🎥 Demo
 
-![Instagram Clone Basic Demo](https://i.postimg.cc/8zNf1CfJ/Instagram-Clone-Basic-Demo.gif)
+[![Instagram-Clone-Basic-Demo.gif](https://i.postimg.cc/8zNf1CfJ/Instagram-Clone-Basic-Demo.gif)](https://postimg.cc/gnt2smDm)
 
 ## 🛠 Technologies Used
 
