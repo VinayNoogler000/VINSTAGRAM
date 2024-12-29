@@ -119,7 +119,7 @@ I would love to hear your feedback on this project! If you have suggestions for 
 
 ## 🐛 Found a Bug? Have a Feature Suggestion?
 
-If you find a bug or have a feature suggestion, please open an issue [here](https://github.com/VinayNoogler000/Instagram-Clone/issues) with a clear description and steps to reproduce. Your input helps make this project better for everyone.
+If you find a bug or have a feature suggestion, please open an issue [here](https://github.com/VinayNoogler000/Instagram-Clone/issues) with a clear description and steps to reproduce. Your input means a lot to me, as it helps me grow and become a more powerful software developer engineer.
 
 ## 🤝 Contributing
 
