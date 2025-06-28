@@ -84,7 +84,6 @@ Before you begin, ensure you have met the following requirements:
 
 ```
 project-root/
-project-root/
 ├── index.js            # Main entry point of the application.
 ├── views               # Contains EJS templates.
     ├── index.ejs       # Homepage of the website.
@@ -126,7 +125,7 @@ This project was built using the following with the help of following people and
 
 - [Apna College Institute](https://www.linkedin.com/company/apna-college/posts/?feedView=all) for building such an amazing full-stack web development course.
 - [Aman Dhatterwal Bhaiya](https://www.linkedin.com/in/dhattarwalaman/) for Creating an Institute like Apna College.
-- [Shradha Khapra Ma'm](https://www.linkedin.com/in/shradha-khapra/) for Teaching and Instructing Programming Fundamentals, Logic Building, Problem-Solving, Critical Thinking, and Web Development/Software Engineering in such a Interesting way.
+- [Shradha Khapra Ma'm](https://www.linkedin.com/in/shradha-khapra/) for Teaching and Instructing Programming Fundamentals, Logic Building, Problem-Solving, Critical Thinking, and Web Development/Software Engineering in such an Interesting way.
 - [Node.js](https://nodejs.org/)
 - [Express.js](https://expressjs.com/)
 - [EJS](https://ejs.co/)
@@ -144,7 +143,7 @@ I am currently open to the following roles:
 
 * 💻 Looking for Internships in Web Development Roles (Frontend/Backend/Full-Stack).
 * 👨‍💻 Seeking Full-time Software Developer Engineer (SDE) Positions
-* 📍 Specialization: Web Development (Frontend, and Full-Stack)
+* 📍 Specialization: Web Development (Frontend, Backend, and Full-Stack)
 
 If you are interested in working with me or have any opportunities, please reach out to me via [LinkedIn](https://www.linkedin.com/in/vinay-tambey/), [Email](mailto:vinaytambey000@gmail.com), or other socials mentioned below.
 
