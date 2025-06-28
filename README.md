@@ -11,7 +11,9 @@
 [![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)](https://expressjs.com/)
 [![UUID](https://img.shields.io/badge/uuid-0078D4?style=for-the-badge&logo=uuid&logoColor=white)](https://www.npmjs.com/package/uuid)
 [![Multer](https://img.shields.io/badge/multer-%23008080.svg?style=for-the-badge&logo=multer&logoColor=white)](https://www.npmjs.com/package/multer)
-[![Method-Override](https://img.shields.io/badge/method--override-%23FF5733.svg?style=for-the-badge&logo=method-override&logoColor=white)](https://www.npmjs.com/package/method-override)
+[![Method-Override](https://img.shields.io/badge/method--override-%23FF5722.svg?style=for-the-badge&logo=method-override&logoColor=white)](https://www.npmjs.com/package/method-override)
+[![Nodemon](https://img.shields.io/badge/nodemon-%23FF5722.svg?style=for-the-badge&logo=nodemon&logoColor=white)](https://www.npmjs.com/package/nodemon)
+[![Dotenv](https://img.shields.io/badge/dotenv-%2333A1FF.svg?style=for-the-badge&logo=dotenv&logoColor=white)](https://www.npmjs.com/package/dotenv)
 
 ## 📖 Overview
 
