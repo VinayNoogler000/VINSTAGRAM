@@ -1,6 +1,9 @@
 # Node modules
 node_modules/
 
+# Uploads
+public/uploads/
+
 # Logs
 logs/
 *.log
