@@ -1,4 +1,4 @@
-# Instagram Clone (Basic)
+# Vinstagram - Social Media Platform for Gen-Alpha
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/VinayNoogler000/Instagram-Clone/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/VinayNoogler000/QR-Code-Generator)](https://github.com/VinayNoogler000/Instagram-Clone/issues)
@@ -17,7 +17,8 @@
 
 ## 📖 Overview
 
-This project is a basic clone of Instagram built to strengthen my backend web development skills, where user have the basic functionalities of uploading photos with a caption (as posts), view posts, edit the post's caption, and delete the post. It demonstrates the fundamental concepts of building a web application by using these backend web technologies.
+Vinstagram is a social media platform, where users can create, view, edit and delete their posts, where each post consists of an image and a caption. 
+This project is built completely by the intent of learning and strengthening my web development skills, especially Backend development, and later scaling it to a Full-Stack Web App by integrating DB and more features to it. It demonstrates the fundamental concepts of building a web application by using these backend web technologies.
 
 ## 🎥 Demo
 

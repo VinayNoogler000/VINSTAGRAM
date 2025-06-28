@@ -19,7 +19,7 @@
   ],
   "author": "Vinay Tambey",
   "license": "MIT",
-  "description": "A basic clone of Instagram, where user can create a new post (consisting of a photo and a caption), view post, edit caption, and delete post. This clone project is just made by the intent of learning and practicing my backend web development skills, without using CSS styling or Databases (instead an array).",
+  "description": "Vinstagram is a social-media platform for Gen-Alpha, where user can create, view, edit, and delete their posts. Each post consists of a photo and a caption. This project is just made by the intent of learning and practicing my backend (maybe, full-stack) web development skills, initially not using CSS styling or Databases, instead an array, but later I will be adding more features and styling to it.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/VinayNoogler000/Instagram-Clone.git"
