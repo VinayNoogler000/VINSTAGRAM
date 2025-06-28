@@ -1,10 +1,14 @@
+// Import necessary modules:
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const { v4: uuidv4 } = require("uuid");
 const methodOverride = require("method-override");
 const multer = require('multer');
+
+// Create an instance of the express application:
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT;
 
 // Configure multer for specifing uploaded file's destinatation and filename:
 const storage = multer.diskStorage({
@@ -30,7 +34,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Define 'Resource' as an array of posts, on which CRUD operations can be performed, instead of a database:
-let posts = [
+const posts = [
     {
         id: uuidv4(),
         username: "vinay",
@@ -51,41 +55,48 @@ let posts = [
     },
 ];
 
-// Function to traverse the array of characters until a dot '.' is found:
-const traverseUntil = (arr) => { 
-    const result = [];
-    for (let el of arr) {
-        if (el === '.') {
-            break;
-        }
-        else {
-            result.push(el);
-        }
-    }
-    return result;
-}
-
 // Define the routes:
-app.get("/posts", (req, res) => {
-    res.render("index.ejs", {posts, traverseUntil});
+app.get("/", (req, res) => {
+    res.redirect("/posts");
 });
 
+// Render ALL POSTS on the Index Page:
+app.get("/posts", (req, res) => {
+    res.render("index.ejs", {posts});
+});
+
+// Render the NEW POST Form:
 app.get("/posts/new", (req, res) => {
     res.render("new.ejs");
 });
 
+// Render a SPECIFIC POST by its ID:
 app.get("/posts/:id", (req, res) => {
     const { id } = req.params;
     const post = posts.find(p => p.id === id);
-    res.render("show.ejs", {post, traverseUntil});
+
+    if (!post) {
+        res.status(404).send("Post not found");
+    }
+    else {
+        res.render("show.ejs", { post });
+    }
 });
 
+// Render the EDIT POST Form for a SPECIFIC POST by its ID:
 app.get("/posts/:id/edit", (req, res) => {
     const { id } = req.params;
     const post = posts.find(p => p.id === id);
-    res.render("edit.ejs", {post, traverseUntil});
+
+    if (!post) {
+        res.status(404).send("Post not found");
+    }
+    else {   
+        res.render("edit.ejs", { post });
+    }
 });
 
+// Create a NEW POST with an image and caption:
 app.post("/posts", upload.single('image'), (req, res) => { 
     const { username, caption } = req.body;
     const image = req.file;
@@ -93,6 +104,7 @@ app.post("/posts", upload.single('image'), (req, res) => {
     res.redirect("/posts");
 });
 
+// Update an EXISTING POST's caption by its ID:
 app.patch("/posts/:id", (req, res) => {
     const { id } = req.params;
     const newCaption = req.body.caption;
@@ -101,6 +113,7 @@ app.patch("/posts/:id", (req, res) => {
     res.redirect("/posts");
 });
 
+// Delete an EXISTING POST by its ID:
 app.get("/posts/:id/delete", (req, res) => {
     const { id } = req.params;
     posts = posts.filter(p => p.id != id);

@@ -2,7 +2,7 @@
 
 ## Summary
 
-This project is a basic clone of Instagram built to strengthen my backend web development skills, where user have the basic functionalities of uploading photos with a caption (as posts), edit the post's caption, and delete the post. It demonstrates the fundamental concepts of building a web application by using these backend web technologies.
+This project is a basic clone of Instagram built to strengthen my backend web development skills, where user have the basic functionalities of uploading photos with a caption (as posts), view posts, edit the post's caption, and delete the post. It demonstrates the fundamental concepts of building a web application by using these backend web technologies.
 
 ## Technologies Used
 
@@ -12,7 +12,7 @@ This project is a basic clone of Instagram built to strengthen my backend web de
 - **UUID**: A library to generate unique identifiers for each post.
 - **Vanilla CSS**: For styling the HTML content.
 - **Multer**: A middleware for handling `multipart/form-data`, used for uploading files.
-- **Method-Override**: A library to use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
+- **Method-Override**: A library to convert the client's POST HTTP-Request to `PATCH` or `DELETE` HTTP requests, allowing us to perform CRUD operations on resources (Posts).
 
 ## Learnings
 
@@ -23,9 +23,10 @@ This project is a basic clone of Instagram built to strengthen my backend web de
 5. **CRUD Operations**: Understood the concepts of Create, Read, Update, and Delete (CRUD) operations.
 6. **CRUD on Resources**: Learned to perform CRUD operations on resources (data stored in the database) using HTTP verbs and RESTful APIs.
 7. **Redirection**: Learned to redirect client requests using `res.redirect()` in route handlers.
-8. **Method Override**: Learned to override HTTP GET and POST methods with PUT, PATCH, and DELETE methods using the 'method-override' library.
+8. **Method Override**: Learned to override HTTP GET and POST methods with PUT, PATCH, and DELETE methods using the `method-override` library.
 9. **Route/Path vs API**: Understood the difference between a route/path and an API. A route/path is an endpoint to handle requests, while an API is a set of rules for communication between client and server.
-10. **Multer Library**: Learned how to use the 'multer' library for handling file uploads, including specifying the destination and name of the uploaded files, defining the total number of files the client can send with requests or form-data, parsing the image files uploaded as form-data, and handling multiple file uploads of the same field.
+10. **Multer Library**: Learned how to use the `multer` library for handling file uploads, including specifying the destination and name of the uploaded files, defining the total number of files the client can send with requests or form-data, parsing the image files uploaded as form-data, and handling multiple file uploads of the same field.
+11. **Dotenv**: Learned how to use the `dotenv` library to manage environment variables, allowing for better configuration and security of sensitive information.
 
 ## Setup
 
@@ -52,15 +53,21 @@ This project is a basic clone of Instagram built to strengthen my backend web de
 
 ```
 project-root/
-├── index.js          # Main entry point of the application.
-├── views             # Contains EJS templates.
-    ├── posts.ejs     # Homepage of the website.
-├── public            # Contains static files such as CSS and images.
-    ├── style.css     # Basic styling for the whole website (all webpages).
-├── package.json      # Lists the project dependencies and scripts.
-├── .gitignore        # Contains all the files and folders to be ignored (not tracked) by Git.
-├── README.md         # Project documentation.
-└── LICENSE           # Contains the licensing information for the project
+├── index.js            # Main entry point of the application.
+├── views               # Contains EJS templates.
+    ├── index.ejs       # Homepage of the website.
+    ├── new.ejs         # Form to create a new post.
+    ├── show.ejs        # Displays a specific post.
+    ├── edit.ejs        # Form to edit an existing post.
+├── public              # Contains static files such as CSS and images.
+    |── icons           # Directory for storing icons in SVG format.
+    |── uploads/images  # Directory for storing uploaded images.
+    ├── style.css       # Basic styling for the whole website (all webpages).
+├── package.json        # Lists the project dependencies and scripts.
+├── package-lock.json   # Contains the exact versions of dependencies installed.
+├── .gitignore          # Contains all the files and folders to be ignored (not tracked) by Git.
+├── README.md           # Project documentation.
+└── LICENSE             # Contains the licensing information for the project
 ```
 
 ## Feedback
@@ -77,7 +84,7 @@ I am currently open to Full-Stack Web Development roles. If you are interested i
 2. Make the website responsive.
 3. Using Database to store user's data.
 4. Implementing User Authentication.
-5. Adding a Share feature, which will generate a concise link of the posts to share it easily.
+5. Adding a Share feature, which will generate a concise/shortened link of the posts to share it easily.
 
 ## License
 

@@ -6,11 +6,12 @@
     "start": "nodemon index.js"
   },
   "keywords": [
+    "practice-project",
     "clone",
     "instagram",
     "social media",
-    "node.js",
     "javascript",
+    "node.js",
     "express.js",
     "ejs",
     "rest",
@@ -18,7 +19,7 @@
   ],
   "author": "Vinay Tambey",
   "license": "MIT",
-  "description": "A basic clone of Instagram, where user can create a new post (consisting of a photo and a caption), edit caption, and delete post. This clone project is just made by the intent of praciticing my backend web development skills, without using CSS styling or Databases (instead an array).",
+  "description": "A basic clone of Instagram, where user can create a new post (consisting of a photo and a caption), view post, edit caption, and delete post. This clone project is just made by the intent of learning and practicing my backend web development skills, without using CSS styling or Databases (instead an array).",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/VinayNoogler000/Instagram-Clone.git"
@@ -28,6 +29,7 @@
   },
   "homepage": "https://github.com/VinayNoogler000/Instagram-Clone#readme",
   "dependencies": {
+    "dotenv": "^17.0.0",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "method-override": "^3.0.0",
