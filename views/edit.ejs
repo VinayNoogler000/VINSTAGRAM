@@ -11,11 +11,11 @@
     <h1>Vinstagram</h1>
 
     <main>
-        <div class="posts">
+        <div class="posts edit">
             <h2 class="username">@<%= post.username %></h2>
             <img src="/uploads/<%= post.image %>" alt="<%= post.image %>">
             
-            <form action="http://localhost:8080/posts/<%= post.id %>?_method=PATCH" method="post">
+            <form action="/posts/<%= post.id %>?_method=PATCH" method="post">
                 <textarea placeholder="Enter the Caption..." name="caption" rows="5" cols="50"><%= post.caption %></textarea>
                 <button type="submit">Update Post</button>
             </form>

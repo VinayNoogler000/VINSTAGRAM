@@ -1,6 +1,7 @@
 // Import necessary modules:
 require("dotenv").config();
 const express = require("express");
+const fs = require("fs");
 const path = require("path");
 const { v4: uuidv4 } = require("uuid");
 const methodOverride = require("method-override");
@@ -44,7 +45,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Define 'Resource' as an array of posts, on which CRUD operations can be performed, instead of a database:
-const posts = [
+let posts = [
     {
         id: uuidv4(),
         username: "vinay",
@@ -124,9 +125,30 @@ app.patch("/posts/:id", (req, res) => {
 });
 
 // Delete an EXISTING POST by its ID:
-app.get("/posts/:id/delete", (req, res) => {
+app.delete("/posts/:id/delete", (req, res) => {
     const { id } = req.params;
-    posts = posts.filter(p => p.id != id);
+
+    // Find the post and remove it from the "posts" array:
+    let delPost;
+    posts = posts.filter(p => {
+        if (p.id === id) {
+            delPost = p.image;
+            return false;
+        }
+        return true;
+    });
+
+    // Remove the posts from the "/public/uploads/" directory: 
+    const filePath = path.join(__dirname, "public", "uploads", delPost);
+
+    fs.unlink(filePath, (err) => {
+        if (err) {
+            console.error("Error deleting file:", err);
+        } else {
+        console.log("File deleted successfully");
+        }
+    });
+
     res.redirect("/posts");
 });
 

@@ -52,12 +52,13 @@ main {
     margin-bottom: 1.5rem;
 }
 
-.posts .links a {
+.posts .links a, .deleteBtn {
     background: linear-gradient(to bottom right, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #777737, #FCAF45, #FFDC80);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
+    font-size: 1rem;
     font-weight: 600;
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
@@ -65,7 +66,9 @@ main {
     transition: 0.2s ease-in-out;
 }
 
-.posts .links .delete {
+.deleteBtn {
+    border: none;
+    cursor: pointer;
     background: red;
     background-clip: text;
     -webkit-background-clip: text;
@@ -81,7 +84,7 @@ main {
     -webkit-text-fill-color: white;
 }
 
-.posts form {
+.posts.new form, .posts.edit form {
     margin: 1.5rem 0;
     display: flex;
     flex-direction: column;
@@ -89,7 +92,7 @@ main {
     gap: 1.5rem;
 }
 
-.posts form button, form.posts button {
+form.posts.new button, .posts.edit button {
     background: linear-gradient(to bottom right, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #777737, #FCAF45, #FFDC80);
     color: white;
     padding: 0.5rem 1rem;
