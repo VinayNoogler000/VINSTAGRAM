@@ -49,6 +49,7 @@ This project is built completely by the intent of learning and strengthening my 
 9. **Route/Path vs API**: Understood the difference between a route/path and an API. A route/path is an endpoint to handle requests, while an API is a set of rules for communication between client and server.
 10. **Multer Library**: Learned how to use the `multer` library for handling file uploads, including specifying the destination and name of the uploaded files, defining the total number of files the client can send with requests or form-data, parsing the image files uploaded as form-data, and handling multiple file uploads of the same field.
 11. **Dotenv**: Learned how to use the `dotenv` library to manage environment variables, allowing for better configuration and security of sensitive information.
+12. **File System**: Got to know about `fs` built-in Node.js library which allows us to interact with file system on the server, and use it's `fs.unlink()` method to delete/remove files from any specific directory/folder, by passing its correct path. It allows us to read, write, update, delete and manage files and directories.
 
 ## 📋 Prerequisites
 
