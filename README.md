@@ -154,7 +154,7 @@ If you are interested in working with me or have any opportunities, please reach
 ## 📝 To-Do
 
 1. Giving warning to the user when deleting the post.
-2. Make the website responsive.
+2. Make the website responsive. ✅
 3. Using Database to store user's data.
 4. Implementing User Authentication.
 5. Adding a Share feature, which will generate a concise/shortened link of the posts to share it easily.
