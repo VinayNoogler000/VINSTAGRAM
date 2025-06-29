@@ -67,7 +67,7 @@ let posts = [
 ];
 
 // Define the routes:
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
     res.redirect("/posts");
 });
 
@@ -87,7 +87,7 @@ app.get("/posts/:id", (req, res) => {
     const post = posts.find(p => p.id === id);
 
     if (!post) {
-        res.status(404).send("Post not found");
+        throw new Error("Page Not Found!");
     }
     else {
         res.render("show.ejs", { post });
@@ -100,7 +100,7 @@ app.get("/posts/:id/edit", (req, res) => {
     const post = posts.find(p => p.id === id);
 
     if (!post) {
-        res.status(404).send("Post not found");
+        throw new Error("Page Not Found!");
     }
     else {
         res.render("edit.ejs", { post });
@@ -160,6 +160,19 @@ app.use((err, req, res, next) => {
     } else {
         next(err);
     }
+});
+
+// Handling client-requests to All Undefined/Invalid paths:
+app.all('*', (req, res) => {
+    res.render("error.ejs", { message: "Page Not Found!"});
+});
+
+// Custom Error-Handling Middleware:
+app.use((err, req, res, next) => {
+    if (err.message === "Page Not Found!") {
+        res.render("error.ejs", { message: "Page Not Found!"});
+    }
+    else next(err);
 });
 
 app.listen(PORT, () => {
