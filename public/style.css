@@ -17,11 +17,13 @@ main {
     align-items: center;
     gap: 3rem;
     margin-bottom: 5rem;
+    flex-shrink: 1;
 }
 
 .posts {
-    width: 600px;
-    padding: 0.5rem 1.5rem;
+    width: 37.5rem;
+    max-width: 37.5rem; /* 600px */
+    padding: 1.5rem;
     background-color: pink;
     border-radius: 0.5rem;
     display: flex;
@@ -30,12 +32,16 @@ main {
 
 .posts .username {
     font-style: italic;
+    margin: 0;
+    margin-bottom: 1rem;
 }
 
 .posts img {
-    width: 100%;
-    max-height: 750px;
+    max-width: 100%;
+    max-height: 37.5rem;
     border-radius: 0.5rem;
+    object-fit: contain;
+    object-position: center;
 }
 
 .posts .caption {
@@ -48,19 +54,17 @@ main {
 .posts .links {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .posts .links a, .deleteBtn {
     background: linear-gradient(to bottom right, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #777737, #FCAF45, #FFDC80);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: white;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
     text-decoration: none;
     transition: 0.2s ease-in-out;
@@ -70,15 +74,11 @@ main {
     border: none;
     cursor: pointer;
     background: red;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: white;
 }
 
 .posts .links a:hover, .posts form button:hover, form.posts button:hover {
     transform: scale(1.03);
-    opacity: 1;
-    color: white;
     background-clip: border-box;
     -webkit-background-clip: border-box;
     -webkit-text-fill-color: white;
@@ -92,11 +92,32 @@ main {
     gap: 1.5rem;
 }
 
-form.posts.new button, .posts.edit button {
+.posts.edit form textarea {
+    width: 80%;
+    max-width: 30rem;
+    min-width: 30%;
+    height: 3rem;
+}
+
+.posts.edit .links {
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.posts.edit a {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.posts.new button, .posts.edit button {
     background: linear-gradient(to bottom right, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #777737, #FCAF45, #FFDC80);
     color: white;
     padding: 0.5rem 1rem;
     font-size: 1.5rem;
+    font-weight: 600;
     cursor: pointer;
     border-radius: 0.5rem;
     border: none;
@@ -141,4 +162,94 @@ form.posts input[type="file"] {
 form.posts button {
     align-self: center;
     color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    main {
+        padding: 0 0.5rem;
+    }
+
+    .posts {
+        width: auto;
+        min-width: 15.5rem;
+        max-width: 35rem;
+    }
+
+    .posts .links {
+        gap: 1rem;
+    }
+
+    .posts .links a {
+        background: linear-gradient(to bottom right, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #777737, #FCAF45, #FFDC80);
+        -webkit-text-fill-color: white;
+        font-size: 1rem;
+    }
+
+    .deleteBtn {
+        background: red;
+        -webkit-text-fill-color: white;
+        font-size: 1rem;
+    }
+
+    .posts .links a, .deleteBtn {
+        padding: 0.5rem;
+    }
+
+    .newPostLink {
+        padding: 0.75rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    .posts.edit form {
+        margin-bottom: 0.5rem;
+    }
+
+    .posts.edit button, .posts.new button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .posts {
+        padding: 1rem;
+    }
+
+    .posts .username {
+        font-size: 1.25rem;
+        margin: 0;
+        margin-bottom: 0.75rem;
+    }
+
+    .posts .caption {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .posts .links a, .deleteBtn, .posts.edit button, .posts.new button {
+        font-size: 0.85rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .newPostLink {
+        padding: 0.5rem 0.75rem;
+        font-size: 1rem;
+    }
+
+    .posts.edit form textarea {
+        width: 98%;
+        height: 2.5rem;
+    }
+
+    .posts.edit .links {
+        gap: 1rem;
+    }
 }

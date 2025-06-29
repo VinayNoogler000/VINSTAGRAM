@@ -16,8 +16,12 @@
             <img src="/uploads/<%= post.image %>" alt="<%= post.image %>">
             
             <form action="/posts/<%= post.id %>?_method=PATCH" method="post">
-                <textarea placeholder="Enter the Caption..." name="caption" rows="5" cols="50"><%= post.caption %></textarea>
-                <button type="submit">Update Post</button>
+                <textarea placeholder="Enter the Caption..." name="caption"><%= post.caption %></textarea>
+                
+                <div class="links">
+                    <a href="/posts">Back</a>
+                    <button type="submit">Update</button>
+                </div>
             </form>
         </div>
     </main>
