@@ -61,8 +61,8 @@ let posts = [
     {
         id: uuidv4(),
         username: "shradha",
-        image: "food.jpg",
-        caption: "Please, just stop taking pictures, and start eating it!🤤😤🥴"
+        image: "lion.avif",
+        caption: "He's my Lion!🤤😤🥴"
     },
 ];
 
