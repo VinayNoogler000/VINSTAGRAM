@@ -116,7 +116,7 @@ main {
     background: linear-gradient(to bottom right, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #777737, #FCAF45, #FFDC80);
     color: white;
     padding: 0.5rem 1rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
     cursor: pointer;
     border-radius: 0.5rem;

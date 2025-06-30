@@ -51,6 +51,7 @@ This project is built completely by the intent of learning and strengthening my 
 10. **Multer Library**: Learned how to use the `multer` library for handling file uploads, including specifying the destination and name of the uploaded files, defining the total number of files the client can send with requests or form-data, parsing the image files uploaded as form-data, and handling multiple file uploads of the same field.
 11. **Dotenv**: Learned how to use the `dotenv` library to manage environment variables, allowing for better configuration and security of sensitive information.
 12. **File System**: Got to know about `fs` built-in Node.js library which allows us to interact with file system on the server, and use it's `fs.unlink()` method to delete/remove files from any specific directory/folder, by passing its correct path. It allows us to read, write, update, delete and manage files and directories.
+12. **Bunny.net API**: Learnt about how to upload new files/images to the `Storage Zone` and get the image via it's CDN, with robust speed. 
 
 ## 📋 Prerequisites
 
@@ -97,8 +98,9 @@ project-root/
     ├── edit.ejs        # Form to edit an existing post.
 ├── public              # Contains static files such as CSS and images.
     |── icons           # Directory for storing icons in SVG format.
-    |── uploads/images  # Directory for storing uploaded images.
     ├── style.css       # Basic styling for the whole website (all webpages).
+├── init                # Stores auxillary data/files to avoid redundancy, and for increasing maintainability.
+    ├── posts.js        # Stores the Posts array and sample posts data.
 ├── package.json        # Lists the project dependencies and scripts.
 ├── package-lock.json   # Contains the exact versions of dependencies installed.
 ├── .gitignore          # Contains all the files and folders to be ignored (not tracked) by Git.
@@ -141,6 +143,7 @@ This project was built using the following with the help of following people and
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Dotenv](https://www.npmjs.com/package/dotenv) for managing environment variables.
+- [Bunny.net]()
 
 ## 💼 Careers
 

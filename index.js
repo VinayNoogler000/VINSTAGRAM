@@ -7,7 +7,7 @@ const { v4: uuidv4 } = require("uuid");
 const methodOverride = require("method-override");
 const multer = require("multer");
 const axios = require("axios");
-const posts = require("./init/posts");
+const posts = require("./utils/posts");
 
 // Create an instance of the express application:
 const app = express();
