@@ -14,7 +14,7 @@
         <% for(let post of posts) { %>
             <div class="posts">
                 <h2 class="username">@<%= post.username %></h2>
-                <img src="uploads/<%= post.image %>" alt="<%= post.image %>">
+                <img src="<%= post.image.url %>" alt="<%= post.image.fileName %>" loading="lazy">
                 <p class="caption"><%= post.caption %></p>
 
                 <div class="links">

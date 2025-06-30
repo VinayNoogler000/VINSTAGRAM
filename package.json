@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/VinayNoogler000/Instagram-Clone#readme",
   "dependencies": {
+    "axios": "^1.10.0",
     "dotenv": "^17.0.0",
     "ejs": "^3.1.10",
     "express": "^4.21.2",

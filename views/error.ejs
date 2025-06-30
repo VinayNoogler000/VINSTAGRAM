@@ -10,10 +10,19 @@
 <body>
     <h1>Error 404</h1>
     <p><%= message %></p>
-    <p>Redirecting to Home Page in 5 seconds...</p>
 
+    <% if(message === "No image file uploaded." || message === "Caption & Username is required for each post." || message === "Image file is too large. Max 5MB allowed." || message === "Server error during image upload." || message === "Failed to upload the image.") { %>
+    <p>Redirecting to Post Creation Page in 5 seconds...</p>
+    
     <script defer>
-        setTimeout(() => window.location.href = "/", 5000); 
+        setTimeout(() => window.location.href = "/posts/new", 5000); 
     </script>
+    <% } else { %>
+    <p>Redirecting to Home Page in 5 seconds...</p>
+    
+    <script defer>
+        setTimeout(() => window.location.href = "/posts", 5000); 
+    </script>
+    <% } %>
 </body>
 </html>
