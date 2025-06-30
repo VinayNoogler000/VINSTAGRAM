@@ -35,6 +35,7 @@ This project is built completely by the intent of learning and strengthening my 
 - **Vanilla CSS**: For styling the HTML content.
 - **Multer**: A middleware for handling `multipart/form-data`, used for uploading files.
 - **Method-Override**: A library to use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
+- **Bunny.net**: Storage Zone and CDN were used to store uploaded images and serve them to the client, with robustness.
 
 ## 📚 Learnings
 
