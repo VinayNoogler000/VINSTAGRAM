@@ -13,8 +13,7 @@ const posts = require("./utils/posts");
 const app = express();
 const PORT = process.env.PORT;
 const BUNNY_CDN_HOSTNAME = process.env.BUNNY_CDN_HOSTNAME;
-const BUNNY_STORAGE_ZONE_NAME = process.env.BUNNY_STORAGE_ZONE_NAME;
-const BUNNY_STORAGE_UPLOAD_URL = `https://sg.storage.bunnycdn.com/${BUNNY_STORAGE_ZONE_NAME}/`;
+const BUNNY_STORAGE_UPLOAD_URL = `https://sg.storage.bunnycdn.com/${process.env.BUNNY_STORAGE_ZONE_NAME}/`;
 
 // Configure multer to store files in memory (not disk)
 // We will then take the buffer and upload to Bunny.net

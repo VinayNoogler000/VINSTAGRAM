@@ -14,7 +14,7 @@ let posts = [
                 return `https://${BUNNY_CDN_HOSTNAME}${this.fileName}`;
             }
         },
-        caption: "Stop staring at me with your big ol' eyes!😒👀🙄"
+        caption: "WHATT!!! Why the heck do I look like a Cat!??? 😭😿"
     },
     {
         id: uuidv4(),
@@ -25,7 +25,7 @@ let posts = [
                 return `https://${BUNNY_CDN_HOSTNAME}${this.fileName}`;
             }
         },
-        caption: "Hey big guy, wanna have a football match with me!??😋😎⚽"
+        caption: "Stop staring at me with your big ol' eyes!😒👀🙄"
     },
     {
         id: uuidv4(),
@@ -36,7 +36,7 @@ let posts = [
                 return `https://${BUNNY_CDN_HOSTNAME}${this.fileName}`;
             }
         },
-        caption: "He's my Lion!🤤😤🥴"
+        caption: "One day, I'll be the King of My Jungle!🤤😤🥴"
     },
 ];
 
