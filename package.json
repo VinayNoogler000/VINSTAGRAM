@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "22.14.0" 
+  },
   "name": "instagram-clone",
   "version": "1.0.0",
   "main": "index.js",
